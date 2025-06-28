@@ -1,16 +1,15 @@
 import axios from "axios";
 
-// API erişim bilgileri
+
 const BASE_URL = "https://api.themoviedb.org/3";
 
-// Buraya kendi API Read Access Token'ını yazmalısın
+
 const options = {
   headers: {
     Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMDIwZGVkMjAyOWU5ODM5ZjNmYWFlMmJmN2Q5YTg4MCIsIm5iZiI6MTc0MzcxODQ5OC45MzgsInN1YiI6IjY3ZWYwODYyMGM3OTFiZWI1N2FjZTc3MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.2DxrZdNadfhi5Mf9WKrvBLIngXJ9WAPmQNArya7fgzo",
   },
 };
 
-// Trend filmleri getir (HomePage için)
 export const fetchTrendingMovies = async () => {
   const url = `${BASE_URL}/trending/movie/day?language=en-US`;
   const response = await axios.get(url, options);
@@ -45,7 +44,7 @@ export const fetchMovieReviews = async (movieId) => {
   return response.data.results;
 };
 
-// Poster URL’si üretici yardımcı fonksiyon
+// Poster URL si üretici yardımcı fonksiyon
 export const getImageUrl = (path) => {
   return `https://image.tmdb.org/t/p/w500${path}`;
 };
