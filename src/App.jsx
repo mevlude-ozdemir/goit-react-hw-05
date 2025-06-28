@@ -1,16 +1,16 @@
 import { Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
-import { Navigation } from "./component/Navigation.jsx";
+import { Navigation } from "./components/Navigation.jsx";
 
 // Sayfa bileşenlerini lazy-load yap
-const HomePage = lazy(() => import("./component/HomePage.jsx"));
-const MoviesPage = lazy(() => import("./component/MoviesPage.jsx"));
-const MovieDetailsPage = lazy(() => import("./component/MovieDetailsPage.jsx"));
-const NotFoundPage = lazy(() => import("./component/NotFoundPage.jsx"));
+const HomePage = lazy(() => import("./pages/HomePage.jsx"));
+const MoviesPage = lazy(() => import("./pages/MoviesPage.jsx"));
+const MovieDetailsPage = lazy(() => import("./pages/MovieDetailsPage.jsx"));
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage.jsx"));
 
 // MovieDetails içindeki nested bileşenler
-const MovieCast = lazy(() => import("./component/MovieCast.jsx"));
-const MovieReviews = lazy(() => import("./component/MovieReviews.jsx"));
+const MovieCast = lazy(() => import("./components/MovieCast.jsx"));
+const MovieReviews = lazy(() => import("./components/MovieReviews.jsx"));
 
 const App = () => {
   return (

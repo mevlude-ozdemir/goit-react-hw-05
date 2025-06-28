@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { fetchMovieCredits, getImageUrl } from "./Api";
+import { fetchMovieCredits, getImageUrl } from "../services/tmdb-api";
 
 const MovieCast = () => {
   const { movieId } = useParams();
@@ -43,7 +43,7 @@ const MovieCast = () => {
           }}
         >
           <img
-            src={profile_path ? getImageUrl(profile_path) : "https://via.placeholder.com/50x75?text=No+Image"}
+            src={profile_path ? getImageUrl(profile_path) : "https://placehold.co/50x75?text=N/A&font=roboto"}
             alt={name}
             width="50"
             style={{ borderRadius: 5 }}

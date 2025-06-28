@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { fetchTrendingMovies } from "../components/Api.jsx";
+import { fetchTrendingMovies } from "../services/tmdb-api.js";
 import { MovieList } from "../components/MovieList.jsx";
 
 const HomePage = () => {

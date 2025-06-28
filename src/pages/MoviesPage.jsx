@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import { searchMovies } from "../components/Api.jsx";
+import { searchMovies } from "../services/tmdb-api.js";
 import { MovieList } from "../components/MovieList.jsx";
 
 const MoviesPage = () => {
